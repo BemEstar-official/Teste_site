@@ -18,6 +18,7 @@ header {
     transition: box-shadow 0.3s; /* Adicionando transição à sombra do cabeçalho */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionando sombra ao cabeçalho */
     font-family: "Libre Baskerville", serif; /* Alterar a fonte do cabeçalho */
+    
 }
 
 
@@ -26,7 +27,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding-right: 1185px;   
 }
 
 
@@ -38,6 +38,26 @@ h1, h2, h3, h4, h5, h6 {
     color: #212326; /* Cor do texto "Courses" */
 }
   
+/* Media queries para tornar o header responsivo */
+@media screen and (max-width: 992px) {
+    header {
+        height: 50px; /* Reduzir a altura do cabeçalho em telas menores e médias */
+    }
+
+    .header-content {
+        font-size: 20px; /* Ajustar o tamanho da fonte do cabeçalho em telas menores e médias */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        height: 40px; /* Reduzir a altura do cabeçalho em telas menores */
+    }
+
+    .header-content {
+        font-size: 18px; /* Ajustar o tamanho da fonte do cabeçalho em telas menores */
+    }
+}
 
 p {
     font-family: "Montserrat", sans-serif; /* Alterar a fonte da descrição das imagens */
@@ -107,6 +127,24 @@ a {
 }
   
 
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(200px, 1fr)); /* altere para duas colunas em telas menores */
+        gap: 30px; /* espaçamento menor entre os itens da grade */
+    }
+}
+
+/* Media query para telas ainda menores, como smartphones em modo retrato */
+@media screen and (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: repeat(1, minmax(200px, 1fr)); /* altere para uma coluna em telas ainda menores */
+        gap: 15px; /* espaçamento ainda menor entre os itens da grade */
+        margin: 0 50px; /* reduza a margem nas bordas laterais */
+    }
+}
+
+
 .grid-item {
     background-color: #fff; /* cor de fundo dos itens da grade */
     border-radius: 5px; /* bordas arredondadas */
@@ -126,9 +164,13 @@ a {
     height: 300px; /* Ajuste a altura da imagem para ocupar 60% do espaço disponível */
     object-fit: cover; /* Para garantir que a imagem preencha todo o espaço, mantendo sua proporção */
     object-position: top; /* Para alinhar a imagem ao topo do quadrado da grade */
-    border-top-left-radius: 10px; /* Adicionar bordas arredondadas apenas nos cantos superiores */
-    border-top-right-radius: 10px; /* Adicionar bordas arredondadas apenas nos cantos superiores */
+    border-radius: 10px;
+
 }
+
+
+
+
 
 img {
     max-width: 100%;
@@ -153,6 +195,8 @@ img {
     padding: 10px; /* Ajustar o espaçamento interno do texto */
 
 }
+
+
 
 
 .social-icons {
@@ -219,47 +263,39 @@ footer {
 /* Você pode ajustar os valores das media queries de acordo com suas necessidades */
 
 @media screen and (max-width: 1200px) {
-    /* Estilos para telas com largura máxima de 1200px */
+
+
 }
   
 @media screen and (max-width: 992px) {
-    /* Estilos para telas com largura máxima de 992px */
+
+
 }
   
 @media screen and (max-width: 768px) {
-    /* Estilos para telas com largura máxima de 768px (tablets, por exemplo) */
+
+
+    .grid-item img {
+        height: 250px; 
+    }
+
+
+
 }
   
 @media screen and (max-width: 576px) {
-    /* Estilos para telas com largura máxima de 576px (dispositivos móveis em modo paisagem) */
+
+    .grid-item img {
+        height: 200px; 
+    }
+
 }
   
 @media screen and (max-width: 425px) {
-    /* Estilos para telas com largura máxima de 425px (smartphones em modo retrato) */
+
+
 }
   
 
-/* Estilos do menu responsivo */
-.menu-toggle 
-  
-  
-  .menu {
-    display: flex;
-    /* Adicione outros estilos do menu conforme necessário */
-  }
-  
-  /* Media query para mostrar o menu responsivo em telas menores */
-  @media screen and (max-width: 768px) {
-    .menu-toggle {
-      display: block; /* Mostre o botão do menu em telas menores */
-    }
-  
-    .menu {
-      display: none; /* Esconda o menu em telas menores */
-    }
-  
-    .menu.active {
-      display: flex; /* Mostre o menu ao clicar no botão do menu */
-    }
-  }
-  
+
+
