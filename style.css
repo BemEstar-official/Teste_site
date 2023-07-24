@@ -89,23 +89,8 @@ a {
   height: 0px;
 }
 
-.line-rodape {
-  width: 79%;
-  border: 1px solid #6F7282; /* Estilo da linha - cor, espessura, etc. */
-  height: 0px; /* Altura da nova linha - torna a linha mais grossa */
-  margin-top: 100px; /* Adicione margens superior e inferior para espaçamento */
-  position: relative; /* Necessário para posicionar o pseudo-elemento */
-}
 
-.line-rodape::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  background-color: #555; /* Cor do pseudo-elemento */
-  height: 0.5px; /* Altura do pseudo-elemento - torna a linha mais fina */
-}
+
 
 .product-price {
   font-size: 20px; /* Ajuste o tamanho da fonte do preço do produto */
@@ -145,6 +130,12 @@ a {
     border-top-right-radius: 10px; /* Adicionar bordas arredondadas apenas nos cantos superiores */
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
 
 .grid-item:hover {
     background-color: #dedc9890; /* Cor de fundo ao passar o mouse */
@@ -164,11 +155,30 @@ a {
 }
 
 
+.social-icons {
+    text-align: center; /* Centralize os ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    margin-top: 50px; /* Adicione uma margem superior para espaçamento */
+}
+  
+.social-icons a {
+    color: #555; /* Cor dos ícones */
+    margin: 0 10px; /* Adicione espaçamento horizontal entre os ícones */
+}
+
+.line-rodape {
+  width: 79%;
+  height: 0px; /* Altura da nova linha - torna a linha mais grossa */
+  margin-top: 50px; /* Adicione margens superior e inferior para espaçamento */
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+}
+
+
+  
 footer {
-    background-color: #0f0f0f; /* cor de fundo do rodapé */
     color: #ffffff; /* cor do texto do rodapé */
     padding: 20px;
-    margin-top: 40px;
+    margin-top: -10px;
 }
   
 
@@ -176,6 +186,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 175px;
+    margin-right: 175px;
 }
   
 
@@ -199,6 +211,55 @@ footer {
 
 .footer-content ul li a {
     text-decoration: none;
-    color: #fff; /* cor dos links do rodapé */
+    color: #000000; /* cor dos links do rodapé */
 }
+  
+
+/* Estilos base para tamanhos de tela maiores */
+/* Você pode ajustar os valores das media queries de acordo com suas necessidades */
+
+@media screen and (max-width: 1200px) {
+    /* Estilos para telas com largura máxima de 1200px */
+}
+  
+@media screen and (max-width: 992px) {
+    /* Estilos para telas com largura máxima de 992px */
+}
+  
+@media screen and (max-width: 768px) {
+    /* Estilos para telas com largura máxima de 768px (tablets, por exemplo) */
+}
+  
+@media screen and (max-width: 576px) {
+    /* Estilos para telas com largura máxima de 576px (dispositivos móveis em modo paisagem) */
+}
+  
+@media screen and (max-width: 425px) {
+    /* Estilos para telas com largura máxima de 425px (smartphones em modo retrato) */
+}
+  
+
+/* Estilos do menu responsivo */
+.menu-toggle 
+  
+  
+  .menu {
+    display: flex;
+    /* Adicione outros estilos do menu conforme necessário */
+  }
+  
+  /* Media query para mostrar o menu responsivo em telas menores */
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* Mostre o botão do menu em telas menores */
+    }
+  
+    .menu {
+      display: none; /* Esconda o menu em telas menores */
+    }
+  
+    .menu.active {
+      display: flex; /* Mostre o menu ao clicar no botão do menu */
+    }
+  }
   
